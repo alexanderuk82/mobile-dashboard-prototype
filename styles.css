@@ -144,7 +144,7 @@ body {
 .content-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
+  gap: 2rem;
 }
 
 /* Scrollbar Styling (optional) */
@@ -187,13 +187,7 @@ body {
     padding-top: 12px;
   }
   
-  /* Create 2-column grid for cards */
-  .content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
-  }
+ 
   
   /* Performance and Account cards side by side */
   .performance-card,
@@ -213,6 +207,6 @@ body {
   
   .add-widget-button {
     margin: 0;
-    justify-self: start;
+    justify-self: center;
   }
 }

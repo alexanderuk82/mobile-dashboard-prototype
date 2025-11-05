@@ -64,10 +64,16 @@ function renderToastsAndPerformance() {
   toastContainer.appendChild(infoToast);
   setTimeout(() => showToast(infoToast, 0), 200);
   
-  // Account Card (after second toast)
+  // Create Grid Container for Cards (works for both portrait & landscape)
+  const gridContainer = document.createElement('div');
+  gridContainer.className = 'content-grid';
+  
+  // Account Card
   const accountCard = createAccountCard();
-  toastContainer.appendChild(accountCard);
+  gridContainer.appendChild(accountCard);
   setTimeout(() => showAccountCard(accountCard, 0), 250);
+  
+  toastContainer.appendChild(gridContainer);
   
   // Spacer / Divider before Linked Accounts
   const spacer = document.createElement('div');
@@ -84,20 +90,21 @@ function renderToastsAndPerformance() {
   spacer2.className = 'section-spacer';
   toastContainer.appendChild(spacer2);
   
+  // Create Grid Container for Bottom Cards
+  const bottomGrid = document.createElement('div');
+  bottomGrid.className = 'content-grid';
+  
   // Add New Account Card
   const addAccountCard = createAddAccountCard();
-  toastContainer.appendChild(addAccountCard);
+  bottomGrid.appendChild(addAccountCard);
   setTimeout(() => showAddAccountCard(addAccountCard, 0), 350);
-  
-  // Spacer / Divider before Add Widget Button
-  const spacer3 = document.createElement('div');
-  spacer3.className = 'section-spacer';
-  toastContainer.appendChild(spacer3);
   
   // Add Widget Button
   const addWidgetButton = createAddWidgetButton();
-  toastContainer.appendChild(addWidgetButton);
+  bottomGrid.appendChild(addWidgetButton);
   setTimeout(() => showAddWidgetButton(addWidgetButton, 0), 400);
+  
+  toastContainer.appendChild(bottomGrid);
   
   // Add click handlers to toast buttons
   addToastInteractions(toastContainer);

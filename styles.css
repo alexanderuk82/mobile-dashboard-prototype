@@ -140,6 +140,13 @@ body {
   flex-shrink: 0;
 }
 
+/* Content Grid - Default (Portrait) */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
 /* Scrollbar Styling (optional) */
 ::-webkit-scrollbar {
   width: 8px;
@@ -156,4 +163,56 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-gray-800);
+}
+
+/* ========================================
+   LANDSCAPE ORIENTATION LAYOUT
+   ======================================== */
+
+@media (orientation: landscape) {
+  /* Increase max-width for landscape */
+  .mobile-container {
+    max-width: 800px;
+  }
+  
+  /* Main content grid layout */
+  .main-content {
+    padding: 0 24px;
+    padding-bottom: 32px;
+  }
+  
+  /* Toast container stays full width */
+  .toast-container {
+    gap: 1rem;
+    padding-top: 12px;
+  }
+  
+  /* Create 2-column grid for cards */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+  
+  /* Performance and Account cards side by side */
+  .performance-card,
+  .account-card {
+    margin: 0;
+  }
+  
+  /* Linked accounts section full width */
+  .linked-accounts-section {
+    grid-column: 1 / -1;
+  }
+  
+  /* Add account and widget side by side */
+  .add-account-card {
+    margin: 0;
+  }
+  
+  .add-widget-button {
+    margin: 0;
+    justify-self: start;
+  }
 }

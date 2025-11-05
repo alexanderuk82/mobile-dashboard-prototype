@@ -30,7 +30,7 @@ export function createHeader() {
     <div class="notifications-row">
       <div class="notifications-centre">
         <button class="icon-button" aria-label="Notifications">
-          <img src="./assets/f9e95793ce518d6848047a5d38080fcb53b0d469.svg" alt="" class="icon-16">
+          <img src="./assets/email-icon.svg" alt="" class="icon-16">
         </button>
         <div class="notification-counter">
           <div class="number-circle">

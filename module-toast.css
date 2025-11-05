@@ -1,0 +1,141 @@
+/**
+ * Module: Toast Notification Styles
+ * Exact styling from Figma design
+ */
+
+.toast {
+  width: 100%;
+  background-color: #fefefe;
+  border-radius: 4px;
+  box-shadow: 0px 0px 1px 0px rgba(24, 24, 27, 0.3), 
+              0px 16px 24px 0px rgba(24, 24, 27, 0.1);
+  padding: 16px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.toast--show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast--hide {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Toast Content */
+.toast__content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.toast__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.toast__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.toast__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.toast__title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2c2c2c;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.toast__description {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #747373;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+/* Toast Action Buttons */
+.toast__action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.toast__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ededed;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.toast__button:hover {
+  background-color: #e0e0e0;
+}
+
+.toast__button:active {
+  background-color: #d5d5d5;
+}
+
+.button-text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2c2c2c;
+  font-stretch: 75%;
+}
+
+.toast__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background-color: #ededed;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.toast__icon-button:hover {
+  background-color: #e0e0e0;
+}
+
+.toast__icon-button:active {
+  background-color: #d5d5d5;
+}
+
+.toast__icon-button .icon-24 {
+  width: 24px;
+  height: 24px;
+  display: block;
+}

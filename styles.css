@@ -1,0 +1,159 @@
+/**
+ * Global Styles & Base Layout
+ * Mobile Dashboard Foundation
+ */
+
+/* CSS Variables - Design Tokens from Figma */
+:root {
+  /* Colors - Palette */
+  --color-gray-white: #fefefe;
+  --color-gray-50: #ededed;
+  --color-gray-100: #d5d5d5;
+  --color-gray-300: #b4b4b6;
+  --color-gray-800: #2c2c2c;
+  --color-gray-body: #747373;
+  
+  /* Brand Colors */
+  --color-brand-primary: #d50032;
+  
+  /* Card Colors */
+  --card-bg-color: #fefefe;
+  --card-header-color: #2c2c2c;
+  --card-body-color: #747373;
+  --card-divider-color: #ededed;
+  
+  /* Button Colors */
+  --button-bg-color: #ededed;
+  --button-text-color: #2c2c2c;
+  
+  /* Spacing */
+  --spacing-half: 4px;
+  --spacing-0: 8px;
+  --spacing-1: 16px;
+  --spacing-2: 24px;
+  --spacing-3: 32px;
+  
+  /* Border Radius */
+  --radius-half: 4px;
+  --radius-0: 8px;
+  
+  /* Typography */
+  --font-family-base: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-condensed: 'Open Sans Condensed', sans-serif;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: #EDEDED;
+  color: var(--color-gray-800);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Mobile Container */
+.mobile-container {
+  max-width: 393px;
+  margin: 0 auto;
+  background-color: var(--color-gray-50);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Main Content */
+.main-content {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 26px; /* Home indicator space */
+}
+
+/* Toast Container */
+.toast-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 16px;
+}
+
+/* Typography Utilities */
+.text-h4 {
+  font-weight: 600;
+  font-size: 31.25px;
+  line-height: 40px;
+}
+
+.text-h6 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.text-body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-xs {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.text-xxs {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20.02px;
+}
+
+/* Utility Classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Section Spacer / Divider */
+.section-spacer {
+  width: 100%;
+  height: 1px;
+  background-color:#cdc9c9;
+  flex-shrink: 0;
+}
+
+/* Scrollbar Styling (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-800);
+}
